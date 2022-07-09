@@ -1,7 +1,9 @@
 @import "reset.scss";
+@import "mixin.scss";
 @import "button.scss";
 
 body {
+  padding-inline: 18px;
   height: 100vh;
   background: linear-gradient(90deg, #2c91ef 7.36%, #285f92 91.92%);
   display: flex;
@@ -9,17 +11,22 @@ body {
   justify-content: center;
   gap: 60px;
   align-items: center;
-  span {
+  .creditos {
     font-family: "Fira Sans";
     font-weight: 600;
     font-size: 24px;
     line-height: 19px;
     color: #ffffff;
+    padding-bottom: 40px;
   }
 }
 .card {
-  width: 520px;
-  height: 720px;
+  margin-top: 60px;
+  padding: 24px;
+  width: 100%;
+  max-width: 520px;
+  height: 100%;
+  max-height: 720px;
   background: radial-gradient(
     63.05% 63.05% at 22.19% 22.12%,
     rgba(255, 255, 255, 0.28) 3.58%,
@@ -39,7 +46,7 @@ body {
       img {
         border-radius: 50%;
         border: 6px solid #dad7e9;
-        width: 200px;
+        max-width: 200px;
         height: 200px;
         margin-bottom: 24px;
       }
@@ -48,8 +55,7 @@ body {
       font-family: "Fira Sans";
       font-weight: 700;
       font-size: 42px;
-      line-height: 36px;
-      letter-spacing: 0.01em;
+      line-height: 50px;
       color: #ffffff;
       margin-bottom: 25px;
     }
@@ -65,19 +71,19 @@ body {
     width: 100%;
     max-width: 360px;
     display: flex;
-    // align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
     li {
-      // display: flex;
-      // gap: 18px;
       a {
         font-family: "Rubik", sans-serif;
         font-weight: 600;
         font-size: 24px;
         line-height: 19px;
         background: linear-gradient(180deg, #e6e2ef 0%, rgba(209, 202, 225, 0.9) 100%);
+        &:hover {
+          opacity: 90%;
+        }
         .icone {
           img {
             width: 40px;
@@ -94,6 +100,156 @@ body {
         &.portfolio {
           color: #f5f5f5;
           background: linear-gradient(180deg, #373738 0%, #1d1e21 100%);
+        }
+      }
+    }
+  }
+  @include responsive(800px) {
+    margin-top: 280px;
+  }
+  @include responsive(440px) {
+    max-height: 755px;
+    margin-top: 320px;
+  }
+}
+
+.redes {
+  position: absolute;
+  left: 0;
+  ul {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    position: relative;
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        height: 100px;
+        border-radius: 0px 8px 8px 0px;
+        color: white;
+
+        img {
+          width: 50px;
+        }
+        &#linkedin {
+          background: #0077b7;
+          width: 100px;
+          transition: width 0.7s;
+          &::after {
+            content: "Linkedin";
+            font-size: 20px;
+            font-weight: 400;
+            display: none;
+          }
+          &:hover {
+            width: 200px;
+            &::after {
+              display: block;
+            }
+          }
+        }
+
+        &#github {
+          background: #000000;
+          width: 100px;
+          transition: all 0.6s;
+          &::after {
+            content: "GitHub";
+            font-size: 20px;
+            font-weight: 400;
+            display: none;
+          }
+          &:hover {
+            width: 200px;
+            &::after {
+              display: block;
+            }
+          }
+        }
+        &#instagram {
+          background: #e61f66;
+          width: 100px;
+          transition: all 0.6s;
+          &::after {
+            content: "Instagram";
+            font-size: 20px;
+            font-weight: 400;
+            display: none;
+          }
+          &:hover {
+            width: 200px;
+            &::after {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(1000px) {
+    ul {
+      li {
+        a {
+          &#linkedin {
+            &:hover {
+              width: 100px;
+              &::after {
+                display: none;
+              }
+            }
+          }
+          &#github {
+            &:hover {
+              width: 100px;
+              &::after {
+                display: none;
+              }
+            }
+          }
+          &#instagram {
+            &:hover {
+              width: 100px;
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(800px) {
+    top: 0;
+    left: calc(50% - 174px);
+    ul {
+      flex-direction: row;
+      li {
+        a {
+          border-radius: 0px 0px 8px 8px;
+        }
+      }
+    }
+  }
+  @include responsive(440px) {
+    left: calc(50% - 144px);
+    ul {
+      li {
+        a {
+          img {
+            width: 36px;
+          }
+          &#linkedin,
+          &#github,
+          &#instagram {
+            width: 80px;
+            height: 80px;
+          }
         }
       }
     }

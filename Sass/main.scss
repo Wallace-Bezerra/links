@@ -21,12 +21,12 @@ body {
   }
 }
 .card {
-  margin-top: 60px;
-  padding: 24px;
+  margin-top: 6rem;
+  padding: 2.4rem;
   width: 100%;
-  max-width: 520px;
+  max-width: 52rem;
   height: 100%;
-  max-height: 720px;
+  max-height: 72rem;
   background: radial-gradient(
     63.05% 63.05% at 22.19% 22.12%,
     rgba(255, 255, 255, 0.28) 3.58%,
@@ -40,7 +40,7 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center;
-  gap: 60px;
+  gap: 6rem;
   .info {
     .imagem {
       img {
@@ -69,33 +69,33 @@ body {
   }
   .buttons {
     width: 100%;
-    max-width: 360px;
+    max-width: 36rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
     li {
       a {
         font-family: "Rubik", sans-serif;
         font-weight: 600;
-        font-size: 24px;
-        line-height: 19px;
+        font-size: 2.4rem;
+        line-height: 1.9rem;
         background: linear-gradient(180deg, #e6e2ef 0%, rgba(209, 202, 225, 0.9) 100%);
         &:hover {
           opacity: 90%;
         }
         .icone {
           img {
-            width: 40px;
-            height: 40px;
+            width: 4rem;
+            height: 4rem;
           }
         }
         span {
           color: #1b1528;
           font-family: "Rubik", sans-serif;
           font-weight: 600;
-          font-size: 24px;
-          line-height: 19px;
+          font-size: 2.4rem;
+          line-height: 1.9rem;
         }
         &.portfolio {
           color: #f5f5f5;
@@ -105,11 +105,11 @@ body {
     }
   }
   @include responsive(800px) {
-    margin-top: 280px;
+    margin-top: 28rem;
   }
   @include responsive(440px) {
-    max-height: 755px;
-    margin-top: 320px;
+    max-height: 75.5rem;
+    margin-top: 32rem;
   }
 }
 
@@ -118,37 +118,37 @@ body {
   left: 0;
   ul {
     width: 100%;
-    max-width: 600px;
+    max-width: 60rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 24px;
+    gap: 2.4rem;
     position: relative;
     li {
       a {
         display: flex;
         align-items: center;
-        gap: 20px;
-        height: 100px;
+        gap: 2rem;
+        height: 10rem;
         border-radius: 0px 8px 8px 0px;
         color: white;
 
         img {
-          width: 50px;
+          width: 5rem;
         }
         &#linkedin {
           background: #0077b7;
-          width: 100px;
+          width: 10rem;
           transition: width 0.7s;
           &::after {
             content: "Linkedin";
-            font-size: 20px;
+            font-size: 2rem;
             font-weight: 400;
             display: none;
           }
           &:hover {
-            width: 200px;
+            width: 20rem;
             &::after {
               display: block;
             }
@@ -157,16 +157,16 @@ body {
 
         &#github {
           background: #000000;
-          width: 100px;
+          width: 10rem;
           transition: all 0.6s;
           &::after {
             content: "GitHub";
-            font-size: 20px;
+            font-size: 2rem;
             font-weight: 400;
             display: none;
           }
           &:hover {
-            width: 200px;
+            width: 20rem;
             &::after {
               display: block;
             }
@@ -174,16 +174,16 @@ body {
         }
         &#instagram {
           background: #e61f66;
-          width: 100px;
+          width: 10rem;
           transition: all 0.6s;
           &::after {
             content: "Instagram";
-            font-size: 20px;
+            font-size: 2rem;
             font-weight: 400;
             display: none;
           }
           &:hover {
-            width: 200px;
+            width: 20rem;
             &::after {
               display: block;
             }
@@ -198,7 +198,7 @@ body {
         a {
           &#linkedin {
             &:hover {
-              width: 100px;
+              width: 10rem;
               &::after {
                 display: none;
               }
@@ -206,7 +206,7 @@ body {
           }
           &#github {
             &:hover {
-              width: 100px;
+              width: 10rem;
               &::after {
                 display: none;
               }
@@ -214,7 +214,7 @@ body {
           }
           &#instagram {
             &:hover {
-              width: 100px;
+              width: 10rem;
               &::after {
                 display: none;
               }
@@ -226,7 +226,7 @@ body {
   }
   @include responsive(800px) {
     top: 0;
-    left: calc(50% - 174px);
+    left: calc(50% - 17.4rem);
     ul {
       flex-direction: row;
       li {
@@ -237,18 +237,18 @@ body {
     }
   }
   @include responsive(440px) {
-    left: calc(50% - 144px);
+    left: calc(50% - 14.4rem);
     ul {
       li {
         a {
           img {
-            width: 36px;
+            width: 3.6rem;
           }
           &#linkedin,
           &#github,
           &#instagram {
-            width: 80px;
-            height: 80px;
+            width: 8rem;
+            height: 8rem;
           }
         }
       }

@@ -1,0 +1,101 @@
+@import "reset.scss";
+@import "button.scss";
+
+body {
+  height: 100vh;
+  background: linear-gradient(90deg, #2c91ef 7.36%, #285f92 91.92%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+  align-items: center;
+  span {
+    font-family: "Fira Sans";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 19px;
+    color: #ffffff;
+  }
+}
+.card {
+  width: 520px;
+  height: 720px;
+  background: radial-gradient(
+    63.05% 63.05% at 22.19% 22.12%,
+    rgba(255, 255, 255, 0.28) 3.58%,
+    rgba(255, 255, 255, 0.2296) 92.19%
+  );
+  box-shadow: 0px 0px 6px rgba(255, 253, 253, 0.25);
+  backdrop-filter: blur(14px);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 60px;
+  .info {
+    .imagem {
+      img {
+        border-radius: 50%;
+        border: 6px solid #dad7e9;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 24px;
+      }
+    }
+    h1 {
+      font-family: "Fira Sans";
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 36px;
+      letter-spacing: 0.01em;
+      color: #ffffff;
+      margin-bottom: 25px;
+    }
+    p {
+      font-family: "Rubik", sans-serif;
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 26px;
+      color: #4e23a9;
+    }
+  }
+  .buttons {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    li {
+      // display: flex;
+      // gap: 18px;
+      a {
+        font-family: "Rubik", sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 19px;
+        background: linear-gradient(180deg, #e6e2ef 0%, rgba(209, 202, 225, 0.9) 100%);
+        .icone {
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        span {
+          color: #1b1528;
+          font-family: "Rubik", sans-serif;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 19px;
+        }
+        &.portfolio {
+          color: #f5f5f5;
+          background: linear-gradient(180deg, #373738 0%, #1d1e21 100%);
+        }
+      }
+    }
+  }
+}

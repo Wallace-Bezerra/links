@@ -4,8 +4,8 @@
 
 body {
   padding-inline: 18px;
-  height: 100vh;
-  background: linear-gradient(90deg, #2c91ef 7.36%, #285f92 91.92%);
+  min-height: 100vh;
+  background: linear-gradient(127.64deg, #2a3742 7.36%, #27394a 100%, #353f48 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,14 +27,6 @@ body {
   max-width: 52rem;
   height: 100%;
   max-height: 72rem;
-  background: radial-gradient(
-    63.05% 63.05% at 22.19% 22.12%,
-    rgba(255, 255, 255, 0.28) 3.58%,
-    rgba(255, 255, 255, 0.2296) 92.19%
-  );
-  box-shadow: 0px 0px 6px rgba(255, 253, 253, 0.25);
-  backdrop-filter: blur(14px);
-  border-radius: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +37,7 @@ body {
     .imagem {
       img {
         border-radius: 50%;
-        border: 6px solid #dad7e9;
+        border: 6px solid #fff;
         max-width: 200px;
         height: 200px;
         margin-bottom: 24px;
@@ -57,14 +49,21 @@ body {
       font-size: 42px;
       line-height: 50px;
       color: #ffffff;
-      margin-bottom: 25px;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 130%;
+      margin-bottom: 15px;
+      color: #cfd8dc;
     }
     p {
       font-family: "Rubik", sans-serif;
       font-weight: 500;
       font-size: 26px;
       line-height: 26px;
-      color: #4e23a9;
+      color: #f3de57;
     }
   }
   .buttons {
@@ -73,16 +72,20 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 30px;
     li {
       a {
         font-family: "Rubik", sans-serif;
         font-weight: 600;
         font-size: 2.4rem;
         line-height: 1.9rem;
-        background: linear-gradient(180deg, #e6e2ef 0%, rgba(209, 202, 225, 0.9) 100%);
+        background-color: #1177ce;
+        height: 60px;
+        transition: all 0.5s;
+
         &:hover {
-          opacity: 90%;
+          // opacity: 90%;
+          background-color: #418cce;
         }
         .icone {
           img {
@@ -91,7 +94,7 @@ body {
           }
         }
         span {
-          color: #1b1528;
+          color: #fff;
           font-family: "Rubik", sans-serif;
           font-weight: 600;
           font-size: 2.4rem;
@@ -99,17 +102,36 @@ body {
         }
         &.portfolio {
           color: #f5f5f5;
-          background: linear-gradient(180deg, #373738 0%, #1d1e21 100%);
+          background-color: #676771;
+          &:hover {
+            background-color: #848588;
+          }
         }
       }
     }
   }
   @include responsive(800px) {
-    margin-top: 28rem;
+    margin-top: 15rem;
   }
   @include responsive(440px) {
     max-height: 75.5rem;
-    margin-top: 32rem;
+    margin-top: 12rem;
+    .info {
+      p {
+        line-height: 36px;
+      }
+    }
+  }
+  @include responsive(440px) {
+    gap: 3rem;
+    .info {
+      h1 {
+        font-size: 32px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+    }
   }
 }
 

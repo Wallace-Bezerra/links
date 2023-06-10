@@ -90,8 +90,8 @@ body .creditos {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
   font-size: 26px;
-  line-height: 42px;
-  color: #f3de57;
+  line-height: 60px;
+  color: #57dcf3;
 }
 .card .buttons {
   width: 100%;
@@ -143,7 +143,6 @@ body .creditos {
   }
   .card .info p {
     line-height: 36px;
-    font-size: 22px;
   }
 }
 @media (max-width: 440px) {
